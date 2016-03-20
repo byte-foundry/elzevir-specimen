@@ -60,3 +60,20 @@ $( document ).on( "mousemove", function( event ) {
 	// $('.elzevir-sans > .value > .int.width').html(sansH.toFixed(2));
 	// $('.elzevir-sans > .value > .int.height').html(sansH.toFixed(2));
 });
+
+
+$('#zoom-in').click(function() {
+   updateZoom(0.1);
+});
+
+$('#zoom-out').click(function() {
+   updateZoom(-0.1);
+});
+
+
+zoomLevel = 1;
+
+var updateZoom = function(zoom) {
+   zoomLevel += zoom;
+   $('body').css({ zoom: zoomLevel, '-moz-transform': 'scale(' + zoomLevel + ')' });
+}
