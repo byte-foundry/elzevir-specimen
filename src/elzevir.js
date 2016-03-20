@@ -8,7 +8,7 @@ Ptypo.createFont('elzevir-light', 'elzevir').then( function() {
 	loaded('elzevir-light');
 });
 Ptypo.createFont('elzevir-bold', 'elzevir').then( function() {
-	Ptypo.changeParam(140, 'thickness', 'elzevir-bold');
+	Ptypo.changeParam(120, 'thickness', 'elzevir-bold');
 	loaded('elzevir-bold');
 });
 Ptypo.createFont('elzevir-caption', 'elzevir').then( function() {
@@ -39,7 +39,7 @@ $( document ).on( "mousemove", function( event ) {
 	console.log( "H: " + centerH + ", V: " + centerV );
 
 	var bold = Ptypo.getParam('thickness', 'elzevir-bold');
-	Ptypo.changeParam(140 * (1 + centerH), 'thickness', 'elzevir-bold');
+	Ptypo.changeParam(120 * (1 + centerH), 'thickness', 'elzevir-bold');
 	$('.elzevir-bold > .value > .int').html(bold.toFixed(2));
 
 	var regular = Ptypo.getParam('thickness', 'elzevir-regular');

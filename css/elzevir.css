@@ -22,7 +22,7 @@
 
 
 body {
-	background-color: #E6E6E6;
+	background-color: #ECEAE5;
 	text-align: center;
 	font-size: 24px;
 	color: #4D4D4D;
@@ -58,12 +58,13 @@ li {
 
 .informations {
 	position: absolute;
-	top: 20px;
-	left: 20px;
+	top: -110px;
+	left: -150px;
 	z-index: 1;
 }
 
 .wrap {
+	position: relative;
 	background-color: white;
 	border-left: 10px solid #49E4A9;
 	padding: 50px;
