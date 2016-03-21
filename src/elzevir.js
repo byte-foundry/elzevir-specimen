@@ -57,5 +57,5 @@ zoomLevel = 1;
 
 var updateZoom = function(zoom) {
    zoomLevel += zoom;
-   $('body').css({ zoom: zoomLevel, '-moz-transform': 'scale(' + zoomLevel + ')' });
+   $('.container').css({ zoom: zoomLevel, '-moz-transform': 'scale(' + zoomLevel + ')' });
 }
