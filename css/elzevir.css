@@ -64,21 +64,23 @@ li {
 }
 
 .zoom {
-	right: 0;
+	position: absolute;
+	right: 20px;
 	display: inline-flex;
 }
 
 .zoom span {
-	width: 30px;
-	height: 30px;
+	width: 25px;
+	height: 25px;
 	display: inline-block;
-	border: 3px solid #FF725E;
+	border: 2px solid #FF725E;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	margin-left: 10px;
 	border-radius: 50%;
 	color: #FF725E;
+	font-size: 14px;
 }
 .zoom span:hover {
 	background-color: #FF725E;

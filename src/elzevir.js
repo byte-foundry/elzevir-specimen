@@ -36,7 +36,7 @@ function loaded( el ) {
 $( document ).on( "mousemove", function( event ) {
 	centerH = (event.pageX - $( document ).width() / 2) / $( document ).width();
 	centerV = (event.pageY - $( document ).height() / 2) / $( document ).height();
-	console.log( "H: " + centerH + ", V: " + centerV );
+	// console.log( "H: " + centerH + ", V: " + centerV );
 
 	var bold = Ptypo.getParam('thickness', 'elzevir-bold');
 	Ptypo.changeParam(120 * (1 + centerH), 'thickness', 'elzevir-bold');
@@ -60,7 +60,6 @@ $( document ).on( "mousemove", function( event ) {
 	// $('.elzevir-sans > .value > .int.width').html(sansH.toFixed(2));
 	// $('.elzevir-sans > .value > .int.height').html(sansH.toFixed(2));
 });
-
 
 $('#zoom-in').click(function() {
    updateZoom(0.1);
