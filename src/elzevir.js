@@ -1,13 +1,16 @@
 // Setup fonts
 Ptypo.createFont('elzevir-book', 'elzevir').then( function() {
+	Ptypo['elzevir-book'].subset = 'The web application Prototypo gives anyone the possibility to create personalized fonts and export them to use on their website or desktop application such as Word or InDesign. elz';
 	Ptypo.changeParam(80, 'thickness', 'elzevir-book');
 	loaded('elzevir-book');
 });
 Ptypo.createFont('elzevir-bold', 'elzevir').then( function() {
+	Ptypo['elzevir-bold'].subset = 'One of the many Elzevirs published by French foundry Renaud during the first wave of revivals in the late 19th century.'; // 9
 	Ptypo.changeParam(120, 'thickness', 'elzevir-bold');
 	loaded('elzevir-bold');
 });
 Ptypo.createFont('elzevir-sans', 'elzevir').then( function() {
+	Ptypo['elzevir-sans'].subset = 'COMES WITH MORE THAN 25 PARAMETERS';
 	Ptypo.changeParam(1, 'serifWidth', 'elzevir-sans');
 	Ptypo.changeParam(1, 'serifHeight', 'elzevir-sans');
 	loaded('elzevir-sans');
@@ -42,7 +45,13 @@ $( document ).on( "mousemove", function( event ) {
 
 	var sans = Ptypo.getParam('xHeight', 'elzevir-sans');
 	Ptypo.changeParam(800 * (1 + centerH), 'xHeight', 'elzevir-sans');
-	$('.elzevir-sans > .value > .int').html(sans.toFixed(0));
+	$('.elzevir-sans > .value > .int.h').html(sans.toFixed(0));
+	var sansT = Ptypo.getParam('thickness', 'elzevir-sans');
+	Ptypo.changeParam(90 * (1 + centerH * 0.1), 'thickness', 'elzevir-sans');
+	$('.elzevir-sans > .value > .int.t').html(sansT.toFixed(0));
+	var sansw = Ptypo.getParam('width', 'elzevir-sans');
+	Ptypo.changeParam(Math.max(1,(1 + centerH)), 'width', 'elzevir-sans');
+	$('.elzevir-sans > .value > .int.w').html(sansw.toFixed(2));
 });
 
 $('#zoom-in').click(function() {

@@ -157,3 +157,9 @@ li span {
 .large {
 	font-size: 350px;
 }
+
+.cursor {
+	position: absolute;
+	top: -50px;
+	left: calc(50% - 47px);
+}
